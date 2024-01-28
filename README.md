@@ -45,3 +45,14 @@ pnpm add -D mocha
 
 
 ## Yaml version
+
+
+# Testing / Dev
+```bash
+pnpm run test
+
+mkdir -p tmp
+
+```
+
+```

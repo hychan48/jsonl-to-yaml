@@ -64,11 +64,16 @@ this.timeout(500);//500ms
  * @param data will automatically be changed
  */
 import fs from 'node:fs';
-import {Expected_singleLineJSON, singleLineJSONL} from "./fixtures/smoke/single-line.mjs";
+import {
+  Expected_multilineJSON,
+  Expected_singleLineJSON,
+  multilineJSONL,
+  singleLineJSONL
+} from "./fixtures/smoke/single-line.mjs";
 import {jsonl2json} from "../src/index.mjs";
 function writeToFile(fileName,data,space=2){
   const sFileName = /\./.test(fileName) ? fileName : fileName + '.json';
-  const filePath = `dev/pbs/test/${sFileName}`
+  const filePath = `tmp/${sFileName}`
   fs.writeFileSync(filePath,
     typeof data === 'string' ? data :JSON.stringify(data,null,+space)
   );
@@ -78,6 +83,13 @@ describe('smoke test jsonl to json', function(){
 
     let actual = jsonl2json(singleLineJSONL);
     assert.deepEqual(actual, Expected_singleLineJSON);
+
+  });
+  it('multi-line', function(){
+
+    let actual = jsonl2json(multilineJSONL);
+    writeToFile('multiline.json',actual);
+    assert.deepEqual(actual, Expected_multilineJSON);
 
   });
 });
