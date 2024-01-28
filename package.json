@@ -1,0 +1,16 @@
+{
+  "name": "jsonl-to-yaml",
+  "version": "0.0.1",
+  "private": "false",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/smoke.test.mjs"
+  },
+  "keywords": ["jsonl","json","yaml","jsonl-to-yaml"],
+  "author": "hychan48",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
