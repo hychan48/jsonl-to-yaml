@@ -10,7 +10,6 @@
  */
 export function jsonl2json(jsonl) {
   return jsonl.split(/\r?\n/).filter(Boolean).map(JSON.parse);
-
 }
 
 /** todo Stream/File version

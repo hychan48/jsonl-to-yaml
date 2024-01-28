@@ -1,5 +1,14 @@
 # jsonl-to-yaml
-Visualizing OpenAI Chat jsonl format in YAML. Easier to understand the content
+* Visualizing OpenAI Chat jsonl format in YAML. Easier to understand the content
+* Demo - use stackblitz? or repl.it
+  * stackblitz easier to start with tbh... since i dont need the vm. stackblitz probably the way to go
+## JSONL-To-JSON
+### String
+```js
+function jsonl2json(jsonl) {
+  return jsonl.split(/\r?\n/).filter(Boolean).map(JSON.parse);
+}
+```
 
 # Compatibility
 * Browser

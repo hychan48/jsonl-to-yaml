@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": "false",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.mjs",
+  "type": "module",
   "scripts": {
     "test": "mocha tests/smoke.test.mjs"
   },
