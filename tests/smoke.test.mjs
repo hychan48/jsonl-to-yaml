@@ -65,6 +65,7 @@ this.timeout(500);//500ms
  */
 import fs from 'node:fs';
 import {Expected_singleLineJSON, singleLineJSONL} from "./fixtures/smoke/single-line.mjs";
+import {jsonl2json} from "../src/index.mjs";
 function writeToFile(fileName,data,space=2){
   const sFileName = /\./.test(fileName) ? fileName : fileName + '.json';
   const filePath = `dev/pbs/test/${sFileName}`
@@ -75,7 +76,7 @@ function writeToFile(fileName,data,space=2){
 describe('smoke test jsonl to json', function(){
   it('basic and simple', function(){
 
-    let actual = singleLineJSONL
+    let actual = jsonl2json(singleLineJSONL);
     assert.deepEqual(actual, Expected_singleLineJSON);
 
   });
