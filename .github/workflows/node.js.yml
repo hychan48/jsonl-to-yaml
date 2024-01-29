@@ -14,6 +14,8 @@ on:
       - 'src/**.js'
       - 'src/**.mjs'
       - '.github/workflows/vnode.js.yml'
+  workflow_dispatch:
+
 
 jobs:
   build:
