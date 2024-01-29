@@ -2,6 +2,8 @@
 * Visualizing OpenAI Chat jsonl format in YAML. Easier to understand the content
 * Demo - use stackblitz? or repl.it
   * stackblitz easier to start with tbh... since i dont need the vm. stackblitz probably the way to go
+* https://hychan48.github.io/jsonl-to-yaml/
+* https://github.com/hychan48/jsonl-to-yaml/
 ## JSONL-To-JSON
 ### String
 ```js
