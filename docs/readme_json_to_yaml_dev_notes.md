@@ -8,3 +8,6 @@
 # Ideas
 * https://github.com/hychan48/jsonl-to-yaml/actions/new?category=none&query=node
   * [ ] Add npm package / github / lib / releases etc.
+
+# Backlog
+* [ ] Optimize docs sub-repo and package.json(s)
