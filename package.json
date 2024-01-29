@@ -8,7 +8,9 @@
   "scripts": {
     "test": "mocha tests/smoke.test.mjs"
   },
-  "workspaces": [ "docs/vuet3" ],
+  "workspaces": [
+    "docs/vuet3"
+  ],
   "keywords": [
     "jsonl",
     "json",
@@ -17,8 +19,14 @@
   ],
   "author": "hychan48",
   "license": "Apache-2.0",
+  "imports": {
+    "##": "./"
+  },
   "devDependencies": {
     "mocha": "^10.2.0",
     "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "yaml": "^2.3.4"
   }
 }
