@@ -88,7 +88,7 @@ describe('smoke test jsonl to json', function(){
   it('multi-line', function(){
 
     let actual = jsonl2json(multilineJSONL);
-    writeToFile('multiline.json',actual);
+    // writeToFile('multiline.json',actual);
     assert.deepEqual(actual, Expected_multilineJSON);
 
   });
