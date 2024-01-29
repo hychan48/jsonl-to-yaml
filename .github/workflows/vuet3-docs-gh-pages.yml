@@ -46,7 +46,7 @@ jobs:
       with:
         version: 8
     - name: Setup Pages # GH pages
-      uses: actions/configure-pages@v4
+      uses: actions/configure-pages@v3
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
