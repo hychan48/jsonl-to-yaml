@@ -57,6 +57,9 @@ jobs:
     # pnpm project stuff:
     - name: Install dependencies
       # https://stackoverflow.com/questions/58139175/running-actions-in-another-directory
+      run: pnpm install
+    - name: Install dependencies docs
+      # https://stackoverflow.com/questions/58139175/running-actions-in-another-directory
       working-directory: ./docs/vuet3
       run: pnpm install
     - name: vite build vuetify
