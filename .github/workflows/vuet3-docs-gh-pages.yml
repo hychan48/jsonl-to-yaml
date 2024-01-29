@@ -102,4 +102,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
         with:
-          artifact-name: vuet3-docs
+          # also that... so...
+          # https://docs.github.com/en/actions/using-workflows/storing-workflow-data-as-artifacts
+          #   uses: actions/download-artifact@v4 # not dash... where did i get dash from
+          artifact_name: vuet3-docs
