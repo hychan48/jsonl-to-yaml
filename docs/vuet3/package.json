@@ -5,6 +5,7 @@
     "dev": "vite",
     "dev:og": "node --no-warnings ./node_modules/.bin/vite",
     "build": "vite build",
+    "build:gh": "vite build --base /jsonl-to-yaml/",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
   },
