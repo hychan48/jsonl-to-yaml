@@ -23,7 +23,8 @@
     "core-js": "^3.34.0",
     "roboto-fontface": "*",
     "vue": "^3.3.0",
-    "vuetify": "^3.0.0"
+    "vuetify": "^3.0.0",
+    "yaml": "^2.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
