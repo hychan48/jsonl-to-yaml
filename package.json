@@ -8,6 +8,7 @@
   "scripts": {
     "test": "mocha tests/smoke.test.mjs"
   },
+  "workspaces": [ "docs/vuet3" ],
   "keywords": [
     "jsonl",
     "json",

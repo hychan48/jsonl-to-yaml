@@ -11,3 +11,4 @@
 
 # Backlog
 * [ ] Optimize docs sub-repo and package.json(s)
+  * https://docs.npmjs.com/cli/v10/using-npm/workspaces

@@ -1,13 +1,15 @@
 {
-  "name": "vuet3",
-  "version": "0.0.0",
+  "name": "jsonl-to-yaml-docs",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "dev:og": "node --no-warnings ./node_modules/.bin/vite",
-
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix --ignore-path .gitignore"
+  },
+  "imports": {
+    "##": "../../src"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
