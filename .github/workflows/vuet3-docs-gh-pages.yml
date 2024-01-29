@@ -5,16 +5,14 @@ name: Node.js GH Pages Builder
 
 on:
   push:
-    # nice to have:
+    # pull request doesn't work unless certain branches. ... so on push... double check
     branches: [ "main" ]
     paths:
       - '.github/workflows/vuet3-docs-gh-pages.yml' # self
-  pull_request:
-    branches: [ "main" ]
     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
     # only for the main repo... not the docs...
-    paths:
       - 'docs/vuet3/**'
+  # double check on branches that support gh-pages... so not pushing on main
   workflow_dispatch:
 
 # copied from jekyll-gh-pages.yml wizard
