@@ -5,9 +5,13 @@ name: Node.js CI Smoke Test
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
     branches: [ "main" ]
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+    # only for the main repo... not the docs...
+    paths:
+      - 'src/**.js'
 
 jobs:
   build:
