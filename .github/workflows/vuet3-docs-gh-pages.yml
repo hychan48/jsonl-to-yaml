@@ -70,7 +70,7 @@ jobs:
     - name: Upload artifact
 #      uses: actions/upload-pages-artifact@v3 # this didnt work...
 #        working-directory: ./docs/vuet3 # might not be used...
-      uses: actions/actions/artifact@v4
+      uses: actions/artifact@v4
       with:
         name: vuet3-docs
         path: docs/vuet3/dist
