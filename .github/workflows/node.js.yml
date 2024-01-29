@@ -12,6 +12,8 @@ on:
     # only for the main repo... not the docs...
     paths:
       - 'src/**.js'
+      - 'src/**.mjs'
+      - '.github/workflows/vnode.js.yml'
 
 jobs:
   build:
