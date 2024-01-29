@@ -7,9 +7,11 @@
       <h1 class="text-h2 font-weight-bold">jsonl-to-json-to-yaml</h1>
       <v-row class="d-flex align-center justify-center">
         <v-col cols="12">
+          <!--          maybe change to combobox, so easier examples and/or reset button -->
           <v-textarea
             label="JSONL"
-            auto-grow
+            _auto-grow
+            rows="5"
             variant="outlined"
 
             v-model="jsonl"
@@ -21,8 +23,8 @@
 
           <v-textarea
             label="JSON"
-            _rows="10"
-            auto-grow
+            _auto-grow
+            rows="6"
             variant="outlined"
             v-model="strJSON"
           />
