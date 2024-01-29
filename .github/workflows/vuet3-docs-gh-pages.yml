@@ -69,10 +69,12 @@ jobs:
     # can actually do some smoke testing here...
 
     # Upload dist
-    - name: Upload artifact
+    - name: Upload pages artifact... note it's v3
+#      working-directory: ./docs/vuet3 # might not be used...
 #      uses: actions/upload-pages-artifact@v3 # this didnt work...
-#        working-directory: ./docs/vuet3 # might not be used...
-      uses: actions/upload-artifact@v4
+#      uses: actions/upload-artifact@v4
+      # https://github.com/actions/upload-pages-artifact
+      uses: actions/upload-pages-artifact@v3 # trying again
       with:
         name: vuet3-docs
         path: docs/vuet3/dist
