@@ -11,6 +11,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',//baseURL or publicPath or assetsDir. ./ is relative to index.html
   plugins: [
     VueRouter(),
     Vue({

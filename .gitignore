@@ -139,3 +139,4 @@ dist
 /.idea/modules.xml
 /.idea/vcs.xml
 /tmp/
+/docs/vuet3/.vite/
