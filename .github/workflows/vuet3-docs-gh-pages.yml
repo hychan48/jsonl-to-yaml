@@ -46,7 +46,7 @@ jobs:
       with:
         version: 8
     - name: Setup Pages # GH pages
-      uses: actions/configure-pages@v3
+      uses: actions/configure-pages@v4
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -68,7 +68,7 @@ jobs:
 
     # Upload dist
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v4
+      uses: actions/upload-pages-artifact@v3
       with:
         working-directory: ./docs/vuet3
         name: vuet3-docs
