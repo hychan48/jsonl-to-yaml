@@ -8,10 +8,16 @@
   "scripts": {
     "test": "mocha tests/smoke.test.mjs"
   },
-  "keywords": ["jsonl","json","yaml","jsonl-to-yaml"],
+  "keywords": [
+    "jsonl",
+    "json",
+    "yaml",
+    "jsonl-to-yaml"
+  ],
   "author": "hychan48",
   "license": "Apache-2.0",
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "vite": "^5.0.12"
   }
 }
