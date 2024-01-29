@@ -1,0 +1,76 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Node.js GH Pages Builder
+
+on:
+  push:
+    # nice to have:
+    branches: [ "docs-gh-a" ]
+  pull_request:
+    branches: [ "main" ]
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
+    # only for the main repo... not the docs...
+    paths:
+      - 'docs/vuet3/**'
+  workflow_dispatch:
+
+# copied from jekyll-gh-pages.yml wizard
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # https://wiki.ubuntu.com/Releases
+    # Ubuntu 22.04.3 LTS
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # node 20 only for building is okay
+        node-version: [20.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    # updated to v4...
+    steps:
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v2
+      with:
+        version: 8
+    - name: Setup Pages # GH pages
+      uses: actions/configure-pages@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm'
+    
+    # pnpm project stuff:
+    - name: Install dependencies
+      # https://stackoverflow.com/questions/58139175/running-actions-in-another-directory
+      working-directory: ./docs/vuet3
+      run: pnpm install
+    - name: vite build vuetify
+      # https://stackoverflow.com/questions/58139175/running-actions-in-another-directory
+      working-directory: ./docs/vuet3
+      run: pnpm run build
+
+    # can actually do some smoke testing here...
+
+    # Upload dist
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v4
+      with:
+        working-directory: ./docs/vuet3
+        name: vuet3-docs
+        path: docs/vuet3/dist
+
