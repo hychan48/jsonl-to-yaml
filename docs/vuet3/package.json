@@ -12,18 +12,18 @@
   "imports": {
     "##": "../../src"
   },
- "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/hychan48/jsonl-to-yaml",
     "directory": "docs/vuet3"
-
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
     "core-js": "^3.34.0",
     "roboto-fontface": "*",
     "vue": "^3.3.0",
-    "vuetify": "^3.0.0"
+    "vuetify": "^3.0.0",
+    "yaml": "^2.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
