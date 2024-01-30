@@ -38,7 +38,34 @@ cat package.json | grep yaml
 rm package.json
 rm -rf node_modules
 rm yarn.lock
+
+corepack enable # this enables pnpm... wth
+mkdir -p app
+cd app
+pnpm init
+# pnpm add hychan48/jsonl-to-yaml#main
+yarn add hychan48/jsonl-to-yaml#main
+pnpm install
+# pnpm add hychan48/jsonl-to-yaml@main
+# pnpm add hychan48/jsonl-to-yaml
+pnpm add github:hychan48/jsonl-to-yaml
+pnpm add github:hychan48/jsonl-to-yaml#main
+# works after git is installed with pnpm...
+# pnpm add github:hychan48/jsonl-to-yaml@main
+# pnpm wont work... yarn is still useful i guess
+# yarn has built in git...
+
+# interesting.. yarn worked w/o git
+apt update
+apt install -y git
+apt install -y git tree
+
 ```
+```
+git ls-remote https://github.com/hychan48/jsonl-to-yaml.git HEAD
+spawn git ENOENT
+```
+
 
 ## Windows
 
