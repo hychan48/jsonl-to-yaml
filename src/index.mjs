@@ -24,6 +24,15 @@ export function json2Yaml(objJsonList){
   return stringify(objJsonList);
 }
 
+/**
+ * jsonl2Yaml as String
+ * @param strJsonList
+ * @return {string}
+ * @dev note add error handling
+ */
+export function jsonl2Yaml(strJsonList) {
+  return json2Yaml(jsonl2json(strJsonList));
+}
 /** todo Stream/File version
  *   encoding input might be utf-8-bom
  * */
