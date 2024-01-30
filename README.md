@@ -12,26 +12,34 @@ function jsonl2json(jsonl) {
 }
 ```
 
-## Install
-
+## Install CLI
 ```bash
-
+yarn add hychan48/jsonl-to-yaml#main
+```
+```bash
+pnpm add hychan48/jsonl-to-yaml # requires git installed
+```
+### Docker Smoke Test
+```bash
+docker pull node:bookworm-slim
+docker run -it --rm --name node-slim --hostname node-slim node:bookworm-slim bash
+corepack enable # enables npm, yarn, pnpm
+# Requires git, thus using yarn
+yarn add hychan48/jsonl-to-yaml#main
+cat package.json | grep yaml
+exit
 ```
 
 ## Dev Container
-
+```bash
+# node .devcontainer
+```
 # Compatibility
 * Browser
-  * [ ] Pure JS
+  * [x] Pure JS
   * [ ] Easier JS
   * [ ] Blob
 * [ ] NodeJS (File Stream later)
-
-## Install
-```bash
-pnpm install
-
-```
 
 
 # Initial Setup
